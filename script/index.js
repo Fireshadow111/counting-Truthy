@@ -1,4 +1,4 @@
-let booleanOutput = document.getElementById('truthOutput');
+let truthOutput = document.getElementById('truthOutput');
 let calButton = document.getElementById('calButton');
 
 // Adding function
