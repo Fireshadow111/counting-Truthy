@@ -1,28 +1,30 @@
+// Getting references to HTML elements
 let truthOutput = document.getElementById('truthOutput');
 let calButton = document.getElementById('calButton');
 
-// Adding function
+let truArray = [false, false, true, false, true, false, false, false, true];
+
+// Function
 function countTruthy(truArray) {
   let truth = 0;
-
-  // Looping through the array
+  // looping through the array
   for (let truValue of truArray) {
 
-    // Validation 
+    // Validating, check if the array only has true or false values
     if (typeof truValue !== 'boolean') {
       return "Enter only boolean values";
     }
-
     if (truValue === true) {
       truth++;
     }
   }
+  // Returning truth values
   return truth;
 }
 
-let truArray = [true, false, true, false, true, true, false, false, true];
-
 calButton.addEventListener('click', function () {
+
+  // Calling the function
   let truth = countTruthy(truArray);
   truthOutput.value = (typeof truth === 'number') ? truth : truth;
 });
